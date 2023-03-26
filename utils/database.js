@@ -3,9 +3,9 @@ const { Pool } = require('pg');
 pool = new Pool({
     user: 'postgres',
     host: 'localhost',
-    port: '5433',
+    port: '5432',
     database: 'crown_19',
-    password: '0000',
+    password: 'tamkkungSingle',
 });
 
 console.log(`Postgres server running on ${pool.options.database} database`);
