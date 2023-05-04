@@ -5,7 +5,7 @@ let db = require('../utils/database');
 
 router.get('/', async function (req, res, next){
     try{
-        let results = await db.query(`select * from category2_19`);
+        let results = await db.query(`select * from category2_19 order by id`);
         // console.log('category data', JSON.stringify(results.rows));
         res.render('crown2_19/index', {
             data: results.rows, 
@@ -17,7 +17,7 @@ router.get('/', async function (req, res, next){
     }     
 });
 
-router.get('/shop2_19/', async function (req, res, next){
+router.get('/shop2_19', async function (req, res, next){
     try{
         let results = await db.query(`
             select * from shop2_19`);
