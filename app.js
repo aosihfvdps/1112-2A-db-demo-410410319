@@ -4,8 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const db = require ('./utils/database');
-const testDBConnection = require ('./utils/test-db');
+// const testDBConnection = require ('./utils/test-db');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

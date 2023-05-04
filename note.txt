@@ -1,2 +1,6 @@
 git config --global user.email "410410319@gms.tku.edu.tw"
 git config --global user.name "aosihfvdps"
+
+
+
+supabase database password: jQaVrXSKCfyRa87m
