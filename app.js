@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const cors = require('cors');
+
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -15,6 +17,8 @@ var usersRouter = require('./routes/users');
 
 const crownRouter_19 = require('./routes/crown_19');
 const crown2Router_19 = require('./routes/crown2_19');
+
+const apiCrown2Router_19 = require('./routes/api/crown2_19');
 
 var app = express();
 
@@ -28,11 +32,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(cors());
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 app.use('/crown_19', crownRouter_19);
 app.use('/crown2_19', crown2Router_19);
+
+app.use('/api/crown2_19', apiCrown2Router_19);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
