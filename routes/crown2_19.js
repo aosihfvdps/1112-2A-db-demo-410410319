@@ -6,7 +6,7 @@ let db = require('../utils/database');
 router.get('/', async function (req, res, next){
     try{
         let results = await db.query(`select * from category2_19 order by id`);
-        // console.log('category data', JSON.stringify(results.rows));
+        //console.log('category data', JSON.stringify(results.rows));
         res.render('crown2_19/index', {
             data: results.rows, 
             name: 'Chen Ji Wei', 

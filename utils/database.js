@@ -7,7 +7,7 @@ if(process.env.DATABASE === 'SUPABASE'){
         host: process.env.SUPABASE_HOST,
         port: '5432',
         database: 'postgres',
-        password: process.env.SUPABASE_PASSWORD,
+        password: process.env.PASSWORD,
     });
     console.log(`Connecting Supabase PostgreSQL running on ${pool.options.database} database`);
 }
