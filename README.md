@@ -1,4 +1,6 @@
+## install module: `npm i`
 ## Start: `npm run dev`
+
 ---
 ### Enter
 * http://localhost:5000
